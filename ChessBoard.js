@@ -1,12 +1,15 @@
 function main(x) {
+    var line = "";
     for (i = 0; i < x; i++) {
-        var lattice = "#_";
-        var space = "_#";
-        if (i % 2 == 0){
-            console.log(lattice.repeat(x / 2));
-        } else {
-            console.log(space.repeat(x / 2));
+        for (j = 0; j < x; j++) {
+            if (i % 2 == j % 2) {
+                line += "#";
+            } else {
+                line += "_";
+            }
         }
+        line += "\n";
     }
+    return line;
 }
-main(8);
+console.log(main(2));
