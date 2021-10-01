@@ -1,3 +1,4 @@
+// Dynamic Chess Board
 function main(x) {
     var line = "";
     for (i = 0; i < x; i++) {
