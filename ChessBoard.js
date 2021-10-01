@@ -1,9 +1,12 @@
-for (i = 1; i < 9; i ++) {
-    var space = ' ';
-    var lattice = '#';
-    if (i % 2 == 0) {
-        console.log((lattice + space)*8);
-    } else {
-        console.log(space + lattice);
+function main(x) {
+    for (i = 0; i < x; i++) {
+        var lattice = "#_";
+        var space = "_#";
+        if (i % 2 == 0){
+            console.log(lattice.repeat(x / 2));
+        } else {
+            console.log(space.repeat(x / 2));
+        }
     }
 }
+main(8);
