@@ -5,4 +5,4 @@ function min (x , y) {
         console.log(y);
     }
 }
-min(4,4);asd
+min(4,4);
