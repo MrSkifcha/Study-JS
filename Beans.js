@@ -1,5 +1,12 @@
-function countBs(x) {
-    console.log(x.length);
-    console.log(x.charAt(1));
+function countChar(line, symbol) {
+    line = line.toLowerCase();
+    symbol = symbol.toLowerCase();
+    var counter = 0;
+    for (i = 0; i < line.length; i++) {
+        if (line.charAt(i) == symbol) {
+            counter++;
+        }
+    }
+    console.log("You founded your number - ", counter);
 }
-countBs("asfgrheh5h");
+countChar("ABcdcC", "C");
