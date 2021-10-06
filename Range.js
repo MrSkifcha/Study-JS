@@ -1,24 +1,21 @@
-var mass = [];
-function range(x , y) {
-    for (i = x; i <= y; i++) {
-        mass.push(x++);
+function sum(customMass) {
+    var summa = 0;
+    for (i = 0; i < customMass.length; i++) {
+        summa = summa + customMass[i];
+    }
+    return summa;
+}
+
+function range(start, end, step = 1) {
+    var mass = [];
+    
+    if (step > 0) {
+        for (i = start; i <= end; i = i + step) mass.push(i);
+    } else if (step < 0) {
+        for (i = end; i >= start; i = i + step) mass.push(i);
+    } else {
+        mass.push(start);
     }
     return mass;
 }
-// function sum(x , y) {
-//     for (i = x; i <= y; i++) {
-//         mass.push(x++);
-//     }
-// }
-console.log(range(2 , 16));
-// console.log(sum(2 , 4));
-
-
-// Напишите функцию range, принимающую два аргумента, начало и конец диапазона, 
-// и возвращающую массив, который содержит все числа из него, включая начальное и 
-// конечное.Затем напишите функцию sum, принимающую массив чисел и возвращающую их 
-// сумму. Запустите указанную выше инструкцию и убедитесь, что она возвращает 55.В 
-// качестве бонуса дополните функцию range, чтобы она могла принимать необязательный 
-// третий аргумент – шаг для построения массива. Если он не задан, шаг равен единице. 
-// Вызов функции range(1, 10, 2) должен будет вернуть [1, 3, 5, 7, 9]. Убедитесь, что 
-// она работает с отрицательным шагом так, что вызов range(5, 2, -1) возвращает [5, 4, 3, 2].
+console.log(range(1, 10));
